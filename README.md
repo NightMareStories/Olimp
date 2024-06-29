@@ -8,28 +8,36 @@
 ## This project has two versions: "production" and "development".
 &nbsp;
 
-### If you just want to test the site, choose the "production" version.
-### If you want to see how the site works and make your own changes, choose the "development" version.
+### If you just want to test the site, select the "production" version from the "production" branch.
+### If you want to see how the site works and make your own changes, select the "development" version from the "development" branch.
 &nbsp;
 
 ### To launch the "production" version of the site, simply open the "index.html" file.
-### To run the "development" version of the site, you need to install "NPM" from the "Node.js" site and all the necessary packages and modules for the "Gulp" project builder.
-&nbsp;
+### To launch the "development" version of the site, follow these steps:
+### **1. `First you need to install `"[NodeJS](https://nodejs.org/)"` on your computer. To check its presence on your PC, enter the command in the terminal:`**
 
 ```
-
-npm i
-
+node --version 
 ```
 
 ```
+npm --version
+```
 
-npm audit fix
+### `If the commands work and display versions, then "Node" and "NPM" are already installed;`
+### **2. `Before installing packages, you must first install "Gulp" globally on your system:`**
 
 ```
-&nbsp;
+npm i --global gulp-cli
+```
 
-## **That's all!**
+### `And then from the folder with "gulpfile.js" install all the plugins from "package.json" using the command in your terminal:`
+
+```
+npm i -D
+```
+
+### **That's all!**
 ---
 &nbsp;
 

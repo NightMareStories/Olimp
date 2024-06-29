@@ -1,5 +1,5 @@
-let project_folder = require('path').basename(__dirname); // Папка готового проекта
-let source_folder = '#src'; // Папка источников
+let project_folder = require('path').basename(__dirname); // Finished project folder
+let source_folder = '#src'; // Sources folder
 
 let fs = require('fs');
 
@@ -32,7 +32,7 @@ let { src, dest } = require('gulp'),
     browsersync = require('browser-sync').create(),
     fileinclude = require('gulp-file-include'),
     del = require('del'),
-    scss = require('gulp-sass'),
+    scss = require('gulp-sass')(require('sass')),
     autoprefixer = require('gulp-autoprefixer'),
     group_media = require('gulp-group-css-media-queries'),
     clean_css = require('gulp-clean-css'),
