@@ -1,0 +1,30 @@
+{
+  "name": "olimp",
+  "version": "1.1.0",
+  "description": "Olimp is an online store site selling sports equipment and goods focused on healthy leisure. This site is developed with 'JavaScript' and a third party range slider 'noUiSlider' using the number formatting library 'wNumb' to select a value from a specific range, also the site uses a touch slider 'Swiper' to scroll through the content on the page",
+  "type": "commonjs",
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "update": "npm update --save-dev && npm update --save"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NightMareStories/Olimp.git"
+  },
+  "keywords": [
+    "Site",
+    "HTML5",
+    "SCSS", 
+    "JavaScriptES6",
+    "Swiper",
+    "noUiSlider",
+    "wNumb",
+    "Gulp"
+  ],
+  "author": "NightMareStories",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NightMareStories/Olimp/issues"
+  },
+  "homepage": "https://github.com/NightMareStories/Olimp#readme"
+}
