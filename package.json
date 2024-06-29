@@ -1,6 +1,6 @@
 {
   "name": "olimp",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Olimp is an online store site selling sports equipment and goods focused on healthy leisure. This site is developed with 'JavaScript' and a third party range slider 'noUiSlider' using the number formatting library 'wNumb' to select a value from a specific range, also the site uses a touch slider 'Swiper' to scroll through the content on the page",
   "type": "commonjs",
   "scripts": {
@@ -18,8 +18,7 @@
     "JavaScriptES6",
     "Swiper",
     "noUiSlider",
-    "wNumb",
-    "Gulp"
+    "wNumb"
   ],
   "author": "NightMareStories",
   "license": "ISC",
