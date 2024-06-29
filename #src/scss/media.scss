@@ -43,7 +43,7 @@
          .bottom-header {
             .actions-header {
                 li {
-                    margin: 0px 30 / 1180 * 100vw 0px 0px;
+                    margin: 0px calc(30 / 1180 * 100vw) 0px 0px;
                 }
                 &__item {
                     padding-left: 30px;
@@ -51,7 +51,7 @@
             }
             .info-header {
                 &__column {
-                    padding: 0px 30 / 1180 * 100vw 0px 0px;
+                    padding: 0px calc(30 / 1180 * 100vw) 0px 0px;
                 }
                 &__callback{
                     background: none;
