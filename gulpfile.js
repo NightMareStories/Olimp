@@ -16,7 +16,7 @@ let path = {
         css: [[source_folder + '/scss/style.scss'], [source_folder + '/used_apps/**/*.css']],
         js: [source_folder + '/js/script.js', source_folder + '/used_apps/app.js'],
         img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
-        fonts: source_folder + '/fonts/*.ttf'
+        fonts: [[source_folder + '/fonts/*.ttf'], [source_folder + '/fonts/*.{woff,woff2}']],
     },
     watch: {
         html: source_folder + '/**/*.html',
@@ -116,11 +116,13 @@ function images() {
 }
 
 function fonts(params) {
-    src(path.src.fonts)
+    return src(path.src.fonts[0])
         .pipe(ttf2woff())
         .pipe(dest(path.build.fonts))
-    return src(path.src.fonts)
+        .pipe(src(path.src.fonts[0]))
         .pipe(ttf2woff2())
+        .pipe(dest(path.build.fonts))
+        .pipe(src(path.src.fonts[1]))
         .pipe(dest(path.build.fonts))
 }
 

@@ -34,7 +34,7 @@ npm i --global gulp-cli
 ### `And then from the folder with "gulpfile.js" install all the plugins from "package.json" using the command in your terminal:`
 
 ```
-npm i -D
+npm i
 ```
 
 ### **That's all!**

@@ -9,7 +9,11 @@
 }
 
 @import 'fonts';
+@import 'vars';
+
+@import './components/generalHeader';
 @import 'main';
+@import './components/generalFooter';
 
 @import 'media';
 
