@@ -1,5 +1,5 @@
 
-//================= variables for header menu operation ================= 
+//================= Variables for header menu operation ================= 
 
 let in_burger = document.querySelector('.menu__body');
 let in_header = document.querySelector('.contacts-header');
@@ -15,7 +15,7 @@ let info_cart = document.querySelector('._cart');
 //=======================================================================
 
 
-//============ function with rebuilding elements on loading =============
+//============ Function with rebuilding elements on loading =============
 //================ and resizing the browser window ====================== 
 
 function navMenu() {
@@ -49,27 +49,27 @@ function navMenu() {
         actions.classList.remove('replaced');
         info_callback.classList.remove('replaced');
         info_cart.classList.remove('replaced');
-    }   
+    }
 }
 
 //=======================================================================
 
 
-//=============== function for working the product menu =================
+//=============== Function for working the product menu =================
 //================ with a change in the browser window ==================
 
 function menuPage() {
     let menuParents = document.querySelectorAll('.menu-page__parent');
     let submenuPage = document.querySelectorAll('.submenu-page');
     let elem = document.querySelector('.menu-page__parent');
-        
+
     for (let i = 0; i < menuParents.length; i++) {
         let menuParent = menuParents[i];
         let subMenu = submenuPage[i];
-        
+
         menuParent.addEventListener("click", function (e) {
             e.preventDefault();
-        
+
             let target = e.currentTarget;
 
             if (menuParent.classList.contains('_active')) {
@@ -100,7 +100,7 @@ function menuPage() {
 //=======================================================================
 
 
-//================== variables for the side-content =====================
+//================== Variables for the side-content =====================
 
 let side_in = document.querySelector('.page__content-side-in');
 let side_from = document.querySelector('.page__side');
@@ -110,7 +110,7 @@ let side_content = document.querySelector('.page__content-side-from');
 //=======================================================================
 
 
-//============= function to arrange blocks of side-content ==============
+//============= Function to arrange blocks of side-content ==============
 //============ according to the size of the browser window ==============
 
 function sideContent() {
@@ -134,7 +134,7 @@ function sideContent() {
 //=======================================================================
 
 
-//=============== variables for the product filtering ===================
+//=============== Variables for the product filtering ===================
 
 let filterMobile = document.querySelector('.filter__title');
 let filterContent = document.querySelector('.filter__content');
@@ -147,13 +147,13 @@ let filterContent = document.querySelector('.filter__content');
 function filterCatalog() {
     let viewport_width = Math.max(widthContentArea = window.innerWidth || document.documentElement.clientWidth ||
         document.body.clientWidth);
-    
+
     if (filterMobile != undefined) {
         if (viewport_width < 992) {
             filterMobile.addEventListener('click', function (e) {
-            e.preventDefault();
+                e.preventDefault();
 
-            filterContent.classList.toggle('_active');
+                filterContent.classList.toggle('_active');
             });
         }
     }
@@ -162,7 +162,7 @@ function filterCatalog() {
 //=======================================================================
 
 
-//============ event listener for loading and page resizing =============
+//============ Event listener for loading and page resizing =============
 
 window.addEventListener('load', function (event) {
     return navMenu(), menuPage(), sideContent(), filterCatalog();
@@ -175,7 +175,7 @@ window.addEventListener('resize', function (event) {
 //=======================================================================
 
 
-//======================= header burger menu ============================
+//======================= Header burger menu ============================
 
 let iconMenu = document.querySelector('.icon-menu');
 let menuBody = document.querySelector('.menu__body');
@@ -188,7 +188,7 @@ iconMenu.addEventListener('click', function (e) {
         iconMenu.classList.remove('_active');
         menuBody.classList.remove('_active');
     }
-    else if (!iconMenu.classList.contains('_active') && !menuBody.classList.contains('_active')){
+    else if (!iconMenu.classList.contains('_active') && !menuBody.classList.contains('_active')) {
         document.body.classList.add('_nav-visible');
         iconMenu.classList.add('_active');
         menuBody.classList.add('_active');
@@ -198,7 +198,7 @@ iconMenu.addEventListener('click', function (e) {
 //=======================================================================
 
 
-//====================== product burger menu ============================
+//====================== Product burger menu ============================
 
 let productBurger = document.querySelector('.menu-page__burger');
 let productBody = document.querySelector('.menu-page__body');
@@ -211,7 +211,7 @@ productBurger.addEventListener("click", function (e) {
 //=======================================================================
 
 
-//======================== product search ===============================
+//======================== Product search ===============================
 
 let searchSelect = document.querySelector('.search-page__title');
 let searchCategories = document.querySelector('.categories-search');
@@ -219,12 +219,12 @@ let searchCategories = document.querySelector('.categories-search');
 searchSelect.addEventListener("click", function (e) {
     searchSelect.classList.toggle('_active');
     searchCategories.classList.toggle('_active');
-})
+});
 
 //=======================================================================
 
 
-//==================== product search checkboxes ========================
+//==================== Product search checkboxes ========================
 
 let checkboxCategories = document.querySelectorAll('.categories-search__checkbox');
 let checkboxSelected = document.querySelector('.search-page__title>span');

@@ -45,7 +45,7 @@ npm i
 &nbsp;
 
 ---
-### Olimp is an online store site selling sports equipment and goods focused on healthy leisure. It consists of a main page, a product catalog page, a product page, and a checkout page.
+### "Olimp" is an online store site selling sports equipment and goods focused on healthy leisure. It consists of a main page, a product catalog page, a product page, and a checkout page.
 &nbsp;
 
 ### On the main page there is a slider with popular products, a slider with store product brands, and a block with information about the company.
