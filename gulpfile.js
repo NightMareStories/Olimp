@@ -1,5 +1,5 @@
 let project_folder = require('path').basename(__dirname); // Finished project folder
-let source_folder = '#src'; // Sources folder
+let source_folder = 'src'; // Sources folder
 
 let fs = require('fs');
 
@@ -16,13 +16,14 @@ let path = {
         css: [[source_folder + '/scss/style.scss'], [source_folder + '/used_apps/**/*.css']],
         js: [source_folder + '/js/script.js', source_folder + '/used_apps/app.js'],
         img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
-        fonts: [[source_folder + '/fonts/*.ttf'], [source_folder + '/fonts/*.{woff,woff2}']],
+        fonts: [[source_folder + '/fonts/*.ttf'], [source_folder + '/fonts/*.{woff,woff2}']]
     },
     watch: {
         html: source_folder + '/**/*.html',
         css: source_folder + '/scss/**/*.scss',
         js: source_folder + '/js/**/*.js',
-        img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}'
+        img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
+        components: source_folder + '/components/**/*.scss'
     },
     clean: './' + project_folder + '/'
 }
@@ -63,6 +64,7 @@ function html() {
         .pipe(dest(path.build.html))
         .pipe(browsersync.stream())
 }
+
 function css() {
     return src(path.src.css[0])
         .pipe(scss({
@@ -175,6 +177,7 @@ function watchFiles(params) {
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.img], images);
+    gulp.watch([path.watch.components], css);
 }
 
 function clean(params) {
